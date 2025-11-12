@@ -1,0 +1,23 @@
+import random
+
+def guess_the_number():
+    print("Добро пожаловать в игру 'Угадай число'!")
+    secret = random.randint(1, 100)
+    attempts = 10
+
+    for i in range(attempts):
+        try:
+            guess = int(input("Введите число от 1 до 100: "))
+            if guess < secret:
+                print("Слишком маленькое число!")
+            elif guess > secret:
+                print("Слишком большое число!")
+            else:
+                print(f"Поздравляю! Вы угадали число {secret} за {i+1} попыток!")
+                return
+        except ValueError:
+            print("Ошибка: нужно ввести целое число!")
+    print(f"Вы проиграли! Загаданное число было {secret}.")
+
+if __name__ == "__main__":
+    guess_the_number()
