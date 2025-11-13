@@ -9,7 +9,7 @@ def factorial_program():
         result = math.factorial(n)
         print(f"Факториал числа {n} равен {result}")
     except ValueError:
-        print("Ошибка: введено нечисловое значение!")
+        print("Ошибка: введено нечисловое значение или не целое число!")
 
 if __name__ == "__main__":
     factorial_program()
